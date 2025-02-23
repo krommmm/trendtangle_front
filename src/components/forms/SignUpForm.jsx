@@ -83,7 +83,6 @@ export function SignUpForm() {
         setAnswerData({...answerData, success:{...answerData.success, active: "true"}});
         if (!isFormulaireValid) return;
         const signRes = await signUp(signUpData);
-        console.log(signRes);
         displayAnswer(signRes.ok);
 
         // if (signRes.ok) {

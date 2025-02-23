@@ -42,7 +42,6 @@ export function LogInForm() {
         e.preventDefault();
         const form = e.target;
         const res = await logIn(logInData);
-        console.log(res);
         form.reset();
         setAnswerData({...answerData, success:{...answerData.success, active: "true"}});
         

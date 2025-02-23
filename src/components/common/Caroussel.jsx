@@ -23,7 +23,6 @@ export function Caroussel({ articles, onUpdate }) {
     function updateVisionWidth() {
         const articleContainerWidth = articlesRef.current.offsetWidth;
         ficheWidth = Math.floor(articleContainerWidth / nbArticlePerVision);
-        console.log(myArticles.length);
         if (articles.length === 3) {
             containerRef.current.style.width = "777px";
         } else if (articles.length === 2) {
