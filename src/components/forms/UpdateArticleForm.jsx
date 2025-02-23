@@ -53,6 +53,9 @@ export function UpdateArticleForm({ article, closeModal, onUpdate }) {
         let myFormData = new FormData();
         if (form.imgUrl.files[0] !== undefined) myFormData.append("imgUrl", form.imgUrl.files[0]);
 
+        myFormData.append("isNew", isNew);
+        console.log(isNew);
+
         const formDataWithoutImgKey = formData;
         delete formDataWithoutImgKey.imgUrl;
 
@@ -79,9 +82,9 @@ export function UpdateArticleForm({ article, closeModal, onUpdate }) {
             setAnswerData({ ...answerData, success: { ...answerData.success, active: "false" } })
         };
 
-        setTimeout(()=>{
+        setTimeout(() => {
             closeModal(false);
-        },1500);
+        }, 1500);
 
 
         form.reset();
